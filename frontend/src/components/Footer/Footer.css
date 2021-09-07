@@ -1,0 +1,32 @@
+footer {
+    display: block;
+    position: relative;
+    justify-content: space-between;
+    width: calc(100%-30px*2);
+    padding: 0 30px 0 30px;
+    margin: 10% auto 40px auto;
+    border-top: 1px solid grey;
+}
+
+.footer__links_link {
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.footer__email p, .footer__phone p {
+    margin: 0;
+}
+
+.footer__email h4, .footer__phone h4, .footer__links h4 {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 500px) {
+    footer {
+        display: flex;
+        width: calc(100% - 50px * 2);
+        padding: 0;
+    }
+}
