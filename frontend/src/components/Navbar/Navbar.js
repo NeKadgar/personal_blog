@@ -9,7 +9,8 @@ const Navbar = () => {
   let isActive_ = isActive[0];
   let classes = isActive[1];
 
-  const toggleClass = () => {
+  const toggleClass = props => {
+    if (props.view.innerWidth >= 630) return; 
     if (!isActive_) {
       classes.push('open');
       document.body.style.overflow = 'hidden';
@@ -19,6 +20,10 @@ const Navbar = () => {
     }
     setActive([!isActive_, classes]);
   };
+
+  const disableClass = () => {
+    setActive([!isActive_, classes]);
+  }
 
   return (
     <div className="navbar">

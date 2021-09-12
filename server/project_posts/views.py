@@ -9,7 +9,7 @@ from project_posts.models import Post
 
 class PostListView(APIView):
     def get(self, request):
-        posts = Post.objects.all()
+        posts = Post.objects.order_by('-created')
         serializer = PostListSerializer(posts, many=True)
         return Response(serializer.data)
     

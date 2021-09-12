@@ -4,9 +4,10 @@ from project_posts.models import Post
 
 
 class PostListSerializer(serializers.ModelSerializer):
+    created = serializers.DateField(format="%B %Y")
     class Meta:
         model = Post
-        fields = ('id', 'title', 'preview_image', 'created')
+        fields = ('id', 'title', 'preview_image', 'created', 'description')
 
 
 class PostSerializer(serializers.ModelSerializer):

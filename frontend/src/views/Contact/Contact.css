@@ -1,0 +1,119 @@
+.contact {
+    width: 90%;
+    margin: 60px auto;
+    display: block;
+    align-items: baseline;
+}
+
+.contact__info {
+    width: 100%;
+}
+
+.contact__form {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contact__form_input label, .contact__form_input input {
+    display: block;
+}
+
+.contact__form_input label {
+    margin-bottom: 10px;
+}
+
+.contact__form_input input {
+    width: 100%;
+    height: 35px;
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+
+.contact__form_textarea label{
+    margin-bottom: 10px;
+}
+
+.contact__form_textarea textarea {
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    border-radius: 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact__form button {
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #eea302;
+    border: 1px solid black;
+    border-radius: 0;
+    cursor: pointer;
+    float: right;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.contact__form_unit {
+    display: block;
+    justify-content: space-between;
+}
+
+.contact__info_email p {
+    margin: 0;
+}
+.contact__info_email h3 {
+    margin: 25px 0 5px 0;
+}
+
+@media (min-width: 630px) {
+    .contact__form_unit {
+        width: 100%;
+        display: flex;
+    }
+    .contact__form_input {
+        width: 48%;
+    }
+    .contact {
+        width: 90%;
+        margin: 70px auto;
+        display: flex;
+    }
+    .contact__form {
+        width: 50%;
+    }
+    .contact__info {
+        width: 50%;
+    }
+}
+
+@media (min-width: 800px) {
+    .contact {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact {
+        width: 60%;
+        margin: 70px auto;
+        display: flex;
+    }
+    .contact__form {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .contact__form_unit {
+        display: flex;
+    }
+    .contact__form_input input {
+        height: 30px;
+    }
+    .contact__form {
+        width: 50%;
+    }
+
+}

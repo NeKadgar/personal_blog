@@ -1,10 +1,11 @@
 import React from 'react';
 import { Home } from './views/Home';
-import { About } from './views/About';
-import { Projects } from './views/Projects';
+import { Contact } from './views/Contact';
+import { ProjectList } from './views/ProjectList';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import Project from './views/Project/Project';
 
 
 export const Routes = () => {
@@ -12,9 +13,10 @@ export const Routes = () => {
     <div>
       <Navbar />
       <Switch>
+        <Route path="/Projects/:id" component={Project}/>
         <Route exact path="/" component={Home} />
-        <Route exact path="/Projects" component={Projects} />
-        <Route exact path="/About" component={About} />
+        <Route exact path="/Projects" component={ProjectList} />
+        <Route exact path="/About" component={Contact} />
       </Switch>
       <Footer />
     </div>
