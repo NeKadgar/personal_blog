@@ -4,20 +4,24 @@ import { Contact } from './views/Contact';
 import { ProjectList } from './views/ProjectList';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { About } from './views/About';
+import { Route, Switch } from 'react-router-dom';
 import Project from './views/Project/Project';
-
+import ScrollToTop from './ScrollToTop';
 
 export const Routes = () => {
   return (
     <div>
       <Navbar />
-      <Switch>
-        <Route path="/Projects/:id" component={Project}/>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/Projects" component={ProjectList} />
-        <Route exact path="/About" component={Contact} />
-      </Switch>
+      <ScrollToTop>
+        <Switch>
+          <Route exact path="/Projects/:id" component={Project}/>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Projects" component={ProjectList} />
+          <Route exact path="/Contact" component={Contact} />
+          <Route exact path="/About" component={About} />
+        </Switch>
+      </ScrollToTop>
       <Footer />
     </div>
   );

@@ -21,10 +21,6 @@ const Navbar = () => {
     setActive([!isActive_, classes]);
   };
 
-  const disableClass = () => {
-    setActive([!isActive_, classes]);
-  }
-
   return (
     <div className="navbar">
       <div className="navbar__logo">
@@ -43,8 +39,8 @@ const Navbar = () => {
 
       <div className={isActive_ ? 'navbar__links_mobile': 'navbar__links'}>
         <div className="navbar__links_link" onClick={toggleClass}><Link to="/Projects">Projects</Link></div>
-        <div className="navbar__links_link" onClick={toggleClass}><Link className="border_link" to="/">Technology</Link></div>
-        <div className="navbar__links_link" onClick={toggleClass}><Link to="/About">Contact</Link></div>
+        <div className="navbar__links_link" onClick={toggleClass}><Link className="border_link" to="/About">About</Link></div>
+        <div className="navbar__links_link" onClick={toggleClass}><Link to="/Contact">Contact</Link></div>
       </div>
       <div className="navbar__mobile">
         <div id="nav-icon1" className={classes.join(" ")} onClick={toggleClass} >

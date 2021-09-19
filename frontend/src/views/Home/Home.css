@@ -59,15 +59,15 @@
 }
 
 .btn_orange {
-    background-color: #eea302;
+    background-color: #eea400;
 }
 
 .btn_red {
-    background-color: red;
+    background-color: #ee2c00;
 }
 
 .btn_ocean {
-    background-color: aqua;
+    background-color: #65dbff;
 }
 
 @media (min-width: 710px) {

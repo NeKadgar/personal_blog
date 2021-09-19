@@ -5,8 +5,38 @@
     align-items: baseline;
 }
 
+.contact__none {
+    display: none;
+    transition: 1s linear;
+}
+
 .contact__info {
     width: 100%;
+}
+
+.contact__popup h3{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.contact__popup p{
+    margin: 10px 0 0 0;
+}
+
+.contact__popup h3 strong {
+ cursor: pointer;
+}
+.contact__popup {
+    background-color: #f4f4f4;
+    padding: 15px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 85%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .contact__form {
@@ -67,6 +97,12 @@
 }
 .contact__info_email h3 {
     margin: 25px 0 5px 0;
+}
+
+@media (min-width: 370px) {
+    .contact__popup {
+        width: 300px;
+    }
 }
 
 @media (min-width: 630px) {

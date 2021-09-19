@@ -26,7 +26,7 @@
 .navbar__logo_iconPlace_icon {
     height: 22px;
     width: 22px;
-    background-color: #eea302;
+    background-color: #eea400;
     border-radius: 500px;
 }
 
@@ -80,7 +80,7 @@
     height: 100%;
     width: 100%;
     padding-top: 40%;
-    background-color: #f3f3f3;
+    background-color: #f4f4f4;
     top: 50%;
     left: 50%;
     /* bring your own prefixes */
@@ -90,6 +90,7 @@
 
 @media (min-width: 630px) {
     .border_link {
+        padding: 10px 15px!important;
         border-left: 1px solid black;
         border-right: 1px solid black;
     }

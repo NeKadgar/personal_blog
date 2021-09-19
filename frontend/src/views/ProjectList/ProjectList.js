@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import PostItem from './Posts/PostItem';
 import { Link } from 'react-router-dom';
+import ProjectListLoader from './ProjectListLoader'
 
 import './ProjectList.css'
 
@@ -12,18 +13,17 @@ const ProjectList = props => {
      fetch('http://localhost:8000/api/posts/')
       .then(response => response.json())
       .then(posts => {
-        setTimeout(() => {
           setPosts(posts)
           setLoading(false)
-        }, 1)
       })
   }, []);
 
   return (
       <div className='projects'>
         <h1 className='projects_title'>Projects</h1>
+        {loading ? <ProjectListLoader /> : null}
         {posts.map((post, index) => {
-          return (<Link to={"/Projects/"+post.id}><PostItem post={post} index={index} key={post.id}/></Link>)
+          return (<Link to={"/Projects/"+post.id} key={post.id}><PostItem post={post} index={index}/></Link>)
         })}
       </div>
     );

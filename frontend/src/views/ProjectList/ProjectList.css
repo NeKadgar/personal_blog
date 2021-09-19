@@ -43,6 +43,34 @@
     width: 100%;
 }
 
+.loading {
+    opacity: 0;
+}
+
+.loading .h2 {
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.loading p {
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 1em 0 0 0;
+}
+
+.loading .img {
+    background-color: white;
+    border-radius: 5px;
+    border: 0;
+}
+
+@keyframes blink {50% {
+    opacity: 1;
+  }}
+.loading { animation: 1.5s blink  linear  infinite }
+
 @media (min-width: 660px) {
     .projects__post {
         display: flex;
