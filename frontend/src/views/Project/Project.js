@@ -9,11 +9,13 @@ const Project = props => {
     const [loading, setLoading] = React.useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/posts/'+props.match.params.id)
+        document.title = "Project"
+        fetch('/api/posts/'+props.match.params.id)
          .then(response => response.json())
          .then(post => {
              setPosts(post)
              setLoading(false)
+             document.title = post.title
          });
      }, [props.match.params.id]);
 

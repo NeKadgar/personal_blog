@@ -23,11 +23,13 @@ class PostDetailView(APIView):
 
 
 class SendMessage(APIView):
+    authentication_classes = []
+
     def post(self, request):
         message = f"""from:\t {request.data.get('email')}\n
         {request.data.get('subject')}\n
         {request.data.get('message')}\n
         {request.data.get('first_name')} {request.data.get('last_name')}.
-        """.replace(' ', '')
+        """
         r = TelegramCore.send_message(message)
         return Response({"status": r})

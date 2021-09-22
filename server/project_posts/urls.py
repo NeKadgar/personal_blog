@@ -7,5 +7,5 @@ app_name = "project posts"
 urlpatterns = [
     path('posts/', PostListView.as_view()),
     path('posts/<int:pk>', PostDetailView.as_view()),
-    path('sendMessage/', SendMessage.as_view())
+    path('sendMessage/', SendMessage.as_view()),
 ]

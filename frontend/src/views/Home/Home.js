@@ -2,8 +2,13 @@ import React from 'react';
 import photo from '../../photo.jpg';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Home = props => {
+  useEffect(() => {
+    document.title = "Maxim Sheleh - developer"
+  }, []);
+
   return (
     <div className="homepage">
       <div className="homepage__photo">

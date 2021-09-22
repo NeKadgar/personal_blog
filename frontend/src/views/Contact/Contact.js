@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
 
 import './Contact.css'
 
@@ -10,11 +10,15 @@ const Contact = props => {
     setMessageStatus(false) 
   }
 
+  useEffect(() => {
+    document.title = "Contact me"
+  }, []);
+
 
   const sendMessage = event => {
     event.preventDefault()
     const data = new FormData(form.current)
-    fetch('http://localhost:8000/api/sendMessage/', { method: 'POST', body: data })
+    fetch('/api/sendMessage/', { method: 'POST', body: data })
       .then(function (response){
         if (response.status === 200) {
           setMessageStatus(true)

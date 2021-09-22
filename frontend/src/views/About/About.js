@@ -1,10 +1,14 @@
-import React from 'react'
-import logo from '../../photo.jpg';
+import React, {useEffect} from 'react'
+import logo from '../../photo.png';
 
 import './About.css'
 
 
 const About = props => {
+    useEffect(() => {
+        document.title = "About"
+    }, []);
+
     return (
         <div className='about'>
             <div  className='about__block'>

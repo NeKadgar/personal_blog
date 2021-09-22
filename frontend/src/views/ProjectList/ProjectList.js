@@ -10,7 +10,11 @@ const ProjectList = props => {
   const [loading, setLoading] = React.useState(true)
 
   useEffect(() => {
-     fetch('http://localhost:8000/api/posts/')
+    document.title = "Projects"
+  }, []);
+
+  useEffect(() => {
+     fetch('/api/posts/')
       .then(response => response.json())
       .then(posts => {
           setPosts(posts)
