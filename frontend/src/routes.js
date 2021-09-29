@@ -11,7 +11,7 @@ import ScrollToTop from './ScrollToTop';
 
 export const Routes = () => {
   return (
-    <div>
+    <div className="content">
       <Navbar />
       <ScrollToTop>
         <Switch>

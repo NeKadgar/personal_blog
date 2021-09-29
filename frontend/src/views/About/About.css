@@ -63,3 +63,9 @@
         width: 60%;
     }
 }
+
+@media (min-width: 1800px) {
+    .about {
+        width: 40%;
+    }
+}
